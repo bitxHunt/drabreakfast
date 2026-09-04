@@ -2,9 +2,9 @@ import { env } from "./src/config/env.js";
 import { defineConfig } from "prisma/config";
 
 export default defineConfig({
-  schema: "prisma/schema.prisma",
+  schema: "src/prisma/schema.prisma",
   migrations: {
-    path: "prisma/migrations",
+    path: "src/prisma/migrations",
   },
   datasource: {
     url: env.DATABASE_URL,

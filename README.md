@@ -10,7 +10,7 @@ Group breakfast plans fall apart the same way every time: someone votes "yes" in
 
 ## Commands
 
-- `/vote` — pick your slot for today, or opt out
+- `/poll` — sends a poll automatically for breakfast slots
 - `/submit` — marshal-only, locks in attendance for their slot
 - `/assign` — admin pool names a stand-in marshal for an unclaimed slot
 - `/leaderboard` — points, streaks, strikes
@@ -20,4 +20,3 @@ Group breakfast plans fall apart the same way every time: someone votes "yes" in
 - **Bot**: Node/TypeScript, [grammY](https://grammy.dev/)
 - **Backend**: Express (health-check only — all real interaction is through the bot)
 - **DB**: Postgres via Prisma
-- **Scheduling**: node-cron, in-process (long polling means no external scheduler is needed)
