@@ -1,0 +1,41 @@
+{
+  "name": "drabreakfast",
+  "version": "0.1.0",
+  "description": "Drabreakfast Telegram bot",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm prisma generate && pnpm tsc && pnpm tsc-alias && cp -r ./src/generated ./dist/src",
+    "start": "NODE_ENV=production node dist/index.js",
+    "dev": "NODE_ENV=development pnpm dlx tsx watch index.ts"
+  },
+  "author": "Thiha Swan Htet",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.19.11",
+    "@types/node-cron": "^3.0.11",
+    "dotenv-cli": "^11.0.0",
+    "prisma": "^7.4.0",
+    "tsc-alias": "^1.8.10",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.4.0",
+    "@prisma/client": "^7.4.0",
+    "dotenv": "^17.3.1",
+    "express": "^5.1.0",
+    "grammy": "^1.30.0",
+    "node-cron": "^3.0.3",
+    "pg": "^8.18.0",
+    "zod": "^4.0.10"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/engines",
+      "esbuild",
+      "prisma"
+    ]
+  }
+}
